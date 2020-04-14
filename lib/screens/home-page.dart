@@ -6,6 +6,32 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  Widget _biuldGoad() {
+    return Padding(
+      padding: const EdgeInsets.only(right: 20.0, top: 20, bottom: 20),
+      child: Container(
+        width: 140.0,
+        height: 160,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: Color(0xffE2FFF1),
+        ),
+        child: Stack(
+          children: <Widget>[
+            Text(
+              "Create new Goal",
+              style: TextStyle(
+                color: Color(0xff949AA8),
+                fontWeight: FontWeight.w400,
+                fontSize: 16,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,16 +100,87 @@ class _HomePageState extends State<HomePage> {
                 width: double.infinity,
                 color: Theme.of(context).accentColor,
                 child: Padding(
-                  padding: EdgeInsets.only(top: 30, left: 20),
+                  padding: EdgeInsets.only(top: 30),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(
-                        "Your Travel Goals",
-                        style: TextStyle(
-                          color: Color(0xff00052A),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
+                      Padding(
+                        padding: EdgeInsets.only(left: 20),
+                        child: Text(
+                          "Your Travel Goals",
+                          style: TextStyle(
+                            color: Color(0xff00052A),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        height: 200.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.all(20.0),
+                              child: Container(
+                                width: 140.0,
+                                height: 160,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: Color(0xffE2FFF1),
+                                ),
+                                child: Stack(
+                                  children: <Widget>[
+                                    Positioned(
+                                      top: 8,
+                                      left: 8,
+                                      child: Container(
+                                        width: 25,
+                                        height: 25,
+                                        child: Icon(
+                                          Icons.add,
+                                          size: 15,
+                                          color: Colors.white,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Theme.of(context).primaryColor,
+                                          boxShadow: [
+                                            BoxShadow(blurRadius: 5,
+                                            offset: Offset(-0.5, 1),
+                                            color: Colors.grey)
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 20.0, right: 20),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text(
+                                            "Create new Goal",
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              color: Color(0xff949AA8),
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 16,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            _biuldGoad(),
+                            _biuldGoad(),
+                          ],
                         ),
                       ),
                     ],
