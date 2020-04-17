@@ -16,12 +16,6 @@ class _HomePageState extends State<HomePage> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: Color(0xffE2FFF1),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey,
-              blurRadius: 28.0,
-            ),
-          ],
         ),
         child: Stack(
           children: <Widget>[
@@ -299,7 +293,7 @@ class _SlideUpWidgetState extends State<SlideUpWidget> {
         width: MediaQuery.of(context).size.width - 70,
         height: 180,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(28),
+          borderRadius: BorderRadius.circular(20),
           color: Colors.white,
           boxShadow: [
             BoxShadow(
@@ -311,18 +305,6 @@ class _SlideUpWidgetState extends State<SlideUpWidget> {
         ),
         child: Column(
           children: <Widget>[
-            ClipRRect(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(28.0),
-                topRight: Radius.circular(28.0),
-              ),
-              child: Image(
-                image: AssetImage('assets/images/pic1.jpg'),
-                height: 103,
-                width: double.infinity,
-                fit: BoxFit.fitWidth,
-              ),
-            ),
             Container(
               margin: const EdgeInsets.fromLTRB(20, 10, 10, 10),
               child: Row(
@@ -447,7 +429,7 @@ class _SlideUpWidgetState extends State<SlideUpWidget> {
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Text(
-              "Where are your firends at",
+              "Where Are Your Firends At",
               style: TextStyle(
                   color: Color(0xff949AA8),
                   fontSize: 16,
