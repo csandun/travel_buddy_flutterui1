@@ -27,7 +27,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  sliding_up_panel: ^1.0.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -45,6 +45,8 @@ flutter:
     - assets/images/avatar.png
     - assets/images/bell.png
     - assets/images/illustration.png
+    - assets/images/mountain.png
+    - assets/images/pic1.jpg
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
