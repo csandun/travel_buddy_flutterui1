@@ -290,54 +290,174 @@ class _SlideUpWidgetState extends State<SlideUpWidget> {
     return Padding(
       padding: const EdgeInsets.only(left: 20, right: 20.0, bottom: 20),
       child: Container(
-        width: MediaQuery.of(context).size.width - 70,
-        height: 180,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-                color: Colors.grey[200],
-                blurRadius: 3,
-                spreadRadius: 1,
-                offset: Offset(0.0, 3)),
-          ],
-        ),
-        child: Column(
-          children: <Widget>[
-            Container(
-              margin: const EdgeInsets.fromLTRB(20, 10, 10, 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Text(
-                    "Victoria Falls, Africa",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
+          width: MediaQuery.of(context).size.width - 70,
+          height: 180,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(28),
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.grey[300],
+                  blurRadius: 4,
+                  spreadRadius: 2,
+                  offset: Offset(0.0, 4)),
+            ],
+          ),
+          child: Padding(
+            padding: const EdgeInsets.only(top: 10, bottom: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.3,
+                  child: Stack(
+                    fit: StackFit.expand,
+                    children: <Widget>[
+                      ClipRRect(
+                        borderRadius: BorderRadius.all(Radius.circular(28)),
+                        child: Image(
+                          image: AssetImage('assets/images/pic1.jpg'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Positioned(
+                        top: 10,
+                        left: 10,
+                        child: CircleAvatar(
+                          radius: 15,
+                          child: Image.asset('assets/images/avatar.png'),
+                        ),
+                      ),
+                      Positioned(
+                        top: 10,
+                        left: 25,
+                        child: CircleAvatar(
+                          radius: 15,
+                          child: Image.asset('assets/images/avatar.png'),
+                        ),
+                      ),
+                      Positioned(
+                        top: 10,
+                        left: 40,
+                        child: CircleAvatar(
+                          radius: 15,
+                          child: Image.asset('assets/images/avatar.png'),
+                        ),
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              Text(
+                                "112",
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Icon(
+                                Icons.star_border,
+                                size: 22,
+                                color: Colors.white,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 5),
-                    child: Icon(
-                      Icons.more_vert,
-                      color: Color(0xffD1D5E9),
-                      size: 16,
-                    ),
-                  )
-                ],
-              ),
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.5,                  
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      RichText(
+                        text: TextSpan(
+                          text: "Kyle",
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xff00052A),),
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: " @Loch Ness",
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff949AA8)),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height:  10),
+                      RichText(
+                        text: TextSpan(
+                          text: "@Jenifer92",
+                          style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              color: Theme.of(context).accentColor,
+                          ),
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: " Hear we are most awaited journey end. Let see the moster 😍",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w600,
+                                  color: Color(0xff949AA8)),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height:  20),
+                      RichText(
+                        text: TextSpan(
+                          text: "Nolan",
+                          style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xff00052A),
+                          ),
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: " Did you catch the moster? 😃",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w600,
+                                  color: Color(0xff949AA8)),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height:  20),
+                      RichText(
+                        text: TextSpan(
+                          text: "Anne",
+                          style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xff00052A),
+                          ),
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: " Awsomeee 😆😍",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w600,
+                                  color: Color(0xff949AA8)),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
             ),
-            Container(
-              padding: EdgeInsets.fromLTRB(20, 0, 10, 0),
-              child: Text(
-                "Victoria Falls is a waterfall on the Zambezi River in southern Africa, which provides habitat for several......",
-                style: TextStyle(fontSize: 12, color: Color(0xff949AA8)),
-              ),
-            ),
-          ],
-        ),
-      ),
+          )),
     );
   }
 
@@ -413,7 +533,7 @@ class _SlideUpWidgetState extends State<SlideUpWidget> {
           ),
           SizedBox(height: 10),
           Container(
-            margin: EdgeInsets.only(left: 20),
+            margin: EdgeInsets.only(left: 20, right: 20),
             height: 230.0,
             child: ListView(
               scrollDirection: Axis.horizontal,
