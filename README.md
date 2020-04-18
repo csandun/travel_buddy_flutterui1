@@ -2,13 +2,12 @@
 
 Using [Tharaka Vithana](https://dribbble.com/TharakaMV)'s UI Concept I design a flutter app 
 
-##My screenshots
+## My screenshots
 
 ![](1.PNG)
 ![](2.PNG)
 
-[##UI Conecpt](https://dribbble.com/shots/10973351-Travel-Buddy/attachments/2580156?mode=media)
+[## UI Conecpt](https://dribbble.com/shots/10973351-Travel-Buddy/attachments/2580156?mode=media)
 
-
-![](travel_buddy-UI Conect.png)
+![](travel_buddy_ui_conect.PNG)
 
