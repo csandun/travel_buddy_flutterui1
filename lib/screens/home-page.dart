@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
+import 'package:flutter_rounded_progress_bar/flutter_rounded_progress_bar.dart';
+import 'package:flutter_rounded_progress_bar/rounded_progress_bar_style.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,17 +18,88 @@ class _HomePageState extends State<HomePage> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: Color(0xffE2FFF1),
+          boxShadow: [
+            BoxShadow(
+                blurRadius: 4,
+                offset: Offset(0, 4),
+                color: Colors.black12,
+                spreadRadius: 2)
+          ],
         ),
         child: Stack(
+          fit: StackFit.expand,
           children: <Widget>[
-            Text(
-              "",
-              style: TextStyle(
-                color: Color(0xff949AA8),
-                fontWeight: FontWeight.w400,
-                fontSize: 16,
+            ClipRRect(
+              borderRadius: BorderRadius.all(Radius.circular(20.0)),
+              child: Image(
+                image: AssetImage(
+                  'assets/images/pic1.jpg',
+                ),
+                fit: BoxFit.fill,
               ),
             ),
+            Positioned(
+              top: 10,
+              left: 10,
+              child: CircleAvatar(
+                radius: 12,
+                child: Image.asset('assets/images/avatar.png'),
+              ),
+            ),
+            Positioned(
+              top: 10,
+              left: 25,
+              child: CircleAvatar(
+                radius: 12,
+                child: Image.asset('assets/images/avatar.png'),
+              ),
+            ),
+            Positioned(
+              top: 10,
+              left: 40,
+              child: CircleAvatar(
+                radius: 12,
+                child: Image.asset('assets/images/avatar.png'),
+              ),
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  "Everest",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
+            ),
+            Positioned(
+              bottom: 30,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 35.0),
+                child: Text(
+                  "62 % complete",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 11,
+                  ),
+                ),
+              ),
+            )
+            // RoundedProgressBar(
+            //   style:
+            //       RoundedProgressBarStyle(borderWidth: 0, widthShadow: 0),
+            //   margin: EdgeInsets.symmetric(vertical: 16),
+            //   borderRadius: BorderRadius.circular(24),
+            //   height: 8,
+            //   percent: 60,
+            // ),
           ],
         ),
       ),
@@ -157,8 +230,9 @@ class _HomePageState extends State<HomePage> {
                                                 boxShadow: [
                                                   BoxShadow(
                                                       blurRadius: 5,
-                                                      offset: Offset(-0.5, 1),
-                                                      color: Colors.grey)
+                                                      offset: Offset(0, 5),
+                                                      color: Colors.black12,
+                                                      spreadRadius: 3)
                                                 ],
                                               ),
                                             ),
@@ -370,7 +444,7 @@ class _SlideUpWidgetState extends State<SlideUpWidget> {
                   ),
                 ),
                 Container(
-                  width: MediaQuery.of(context).size.width * 0.5,                  
+                  width: MediaQuery.of(context).size.width * 0.5,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -378,9 +452,10 @@ class _SlideUpWidgetState extends State<SlideUpWidget> {
                         text: TextSpan(
                           text: "Kyle",
                           style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xff00052A),),
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xff00052A),
+                          ),
                           children: <TextSpan>[
                             TextSpan(
                               text: " @Loch Ness",
@@ -392,18 +467,19 @@ class _SlideUpWidgetState extends State<SlideUpWidget> {
                           ],
                         ),
                       ),
-                      SizedBox(height:  10),
+                      SizedBox(height: 10),
                       RichText(
                         text: TextSpan(
                           text: "@Jenifer92",
                           style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                              color: Theme.of(context).accentColor,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600,
+                            color: Theme.of(context).accentColor,
                           ),
                           children: <TextSpan>[
                             TextSpan(
-                              text: " Hear we are most awaited journey end. Let see the moster 😍",
+                              text:
+                                  " Hear we are most awaited journey end. Let see the moster 😍",
                               style: TextStyle(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w600,
@@ -412,14 +488,14 @@ class _SlideUpWidgetState extends State<SlideUpWidget> {
                           ],
                         ),
                       ),
-                      SizedBox(height:  20),
+                      SizedBox(height: 20),
                       RichText(
                         text: TextSpan(
                           text: "Nolan",
                           style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xff00052A),
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xff00052A),
                           ),
                           children: <TextSpan>[
                             TextSpan(
@@ -432,14 +508,14 @@ class _SlideUpWidgetState extends State<SlideUpWidget> {
                           ],
                         ),
                       ),
-                      SizedBox(height:  20),
+                      SizedBox(height: 20),
                       RichText(
                         text: TextSpan(
                           text: "Anne",
                           style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xff00052A),
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xff00052A),
                           ),
                           children: <TextSpan>[
                             TextSpan(
